@@ -14,6 +14,7 @@ services:
       WORDPRESS_DB_NAME: wue_theme_public
     volumes:
       - ./wordpress/wp-content/themes/wuetheme/:/var/www/html/wp-content/themes/wuetheme/
+      - ./wordpress/wp-content/uploads/:/var/www/html/wp-content/uploads/
 
   db:
     image: mysql:5.7
@@ -25,6 +26,7 @@ services:
       MYSQL_RANDOM_ROOT_PASSWORD: '1'
     volumes:
       - ./db-data:/var/lib/mysql
+      - ./database.sql:/docker-entrypoint-initdb.d/database.sql
 
 volumes:
   wordpress:
