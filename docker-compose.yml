@@ -1,0 +1,31 @@
+version: '3.1'
+
+services:
+
+  wordpress:
+    image: wordpress
+    restart: always
+    ports:
+      - 80:80
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: wuethemepublic@localhost
+      WORDPRESS_DB_PASSWORD: cornhulio
+      WORDPRESS_DB_NAME: wue_theme_public
+    volumes:
+      - ./wordpress/wp-content/themes/wuetheme/:/var/www/html/wp-content/themes/wuetheme/
+
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: wue_theme_public
+      MYSQL_USER: wuethemepublic@localhost
+      MYSQL_PASSWORD: cornhulio
+      MYSQL_RANDOM_ROOT_PASSWORD: '1'
+    volumes:
+      - ./db-data:/var/lib/mysql
+
+volumes:
+  wordpress:
+  db:
