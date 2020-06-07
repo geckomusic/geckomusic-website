@@ -27,7 +27,7 @@ module.exports = merge(common, {
         //bundle files:
         publicPath: "/wp-content/themes/wuetheme/app/",
         stats: 'errors-only',
-        https: true,
+        https: false,
         inline: true,
         noInfo: true,
         historyApiFallback: true,
@@ -39,7 +39,7 @@ module.exports = merge(common, {
         writeToDisk: true,
         proxy: {
             '/': {
-                target: "https://dev.wue-theme-public",
+                target: "http://dev.wue-theme-public",
                 secure: false,
                 changeOrigin: true,
                 autoRewrite: true,
@@ -55,7 +55,7 @@ module.exports = merge(common, {
         //The output directory as an server-internal absolute path:
         path: path.resolve(__dirname, "wordpress/wp-content/themes/wuetheme/app"),
         //relative path on the server publicly accessable:
-        publicPath: "https://dev.wue-theme-public:9200/wp-content/themes/wuetheme/app/",
+        publicPath: "http://dev.wue-theme-public:9200/wp-content/themes/wuetheme/app/",
         //https://webpack.js.org/configuration/output#outputpublicpath:
         //publicPath: 'https://cdn.example.com/assets/', // CDN (always HTTPS)
         //publicPath: '//cdn.example.com/assets/', // CDN (same protocol)
