@@ -19,7 +19,7 @@ module.exports = {
             "~": path.resolve(__dirname, 'src'),
             "@node_modules": path.resolve(__dirname, 'node_modules'),
             'vue$': 'vue/dist/vue.esm.js',
-            '@styles': path.resolve(__dirname, 'src/less'),
+            '@styles': path.resolve(__dirname, 'src/sass'),
         },
         extensions: ['*', '.js', '.vue', '.json']
     },
@@ -41,7 +41,7 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(css|less)$/,
+                test: /\.(css|sass)$/,
                 use: [{
                     loader: 'style-loader'
                 }, {
@@ -50,7 +50,7 @@ module.exports = {
                         sourceMap: sourceMap
                     }
                 }, {
-                    loader: 'less-loader', options: {
+                    loader: 'sass-loader', options: {
                         sourceMap: sourceMap
                     }
                 },]

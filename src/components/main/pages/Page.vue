@@ -58,12 +58,3 @@
         },
     }
 </script>
-<style lang="less" scoped>
-    @import "~@styles/variables";
-
-
-    #pageWrapper {
-        text-align: center;
-    }
-
-</style>

@@ -75,34 +75,3 @@
 
     }
 </script>
-<style lang="less">
-    @import (reference) "~@styles/variables";
-        #homePageLogo {
-            margin: 4rem auto 0;
-            display: block;
-            width: 20rem;
-            max-width: 100%;
-        }
-
-    #homePageTitle {
-        font-size: 3rem;
-        padding: 3rem 0 1.5rem;
-        font-weight: 400;
-    }
-
-
-    @media (max-width: @inner_container_width_px) {
-        #homePageTitle {
-            height: auto;
-            font-size: 2.5rem;
-        }
-    }
-
-
-    @media (max-width: 479px) {
-        #homePageTitle {
-            height: auto;
-            font-size: 2rem;
-        }
-    }
-</style>
