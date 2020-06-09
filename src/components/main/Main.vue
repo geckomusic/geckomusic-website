@@ -50,43 +50,10 @@
 
     }
 </script>
-<style lang="less" scoped>
-    @import (reference) "~@styles/variables";
-    @import (reference) " ~@styles/mixins";
 
-
-    
-    #main_container{
-        .flexOne;
-        overflow: hidden;
-        background: white;
-        .flex;
-        .flexColumn;
-        .alignItemsCenter;
-        .justifyCenter;
+<style scoped>
+    #main_container {
+        flex: 1 0 auto;
+        padding: 10px 20px;
     }
-
-    .fade-enter {
-        opacity: 0;
-        transform: scale(0);
-    }
-
-    .fade-enter-to {
-        opacity: 1;
-        transition: all .3s ease .25s;
-        transform: scale(1);
-    }
-
-    .fade-leave-to {
-        transform: scale(0);
-        opacity: 0;
-        transition: all .20s ease;
-        position:absolute;
-    }
-
-    .loader {
-        position: absolute;
-        z-index: -1;
-    }
-
 </style>

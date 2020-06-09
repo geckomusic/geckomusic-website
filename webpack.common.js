@@ -1,5 +1,5 @@
 const path = require('path');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 //const webpack = require('webpack');
 
@@ -19,7 +19,7 @@ module.exports = {
             "~": path.resolve(__dirname, 'src'),
             "@node_modules": path.resolve(__dirname, 'node_modules'),
             'vue$': 'vue/dist/vue.esm.js',
-            '@styles': path.resolve(__dirname, 'src/less'),
+            '@styles': path.resolve(__dirname, 'src/sass'),
         },
         extensions: ['*', '.js', '.vue', '.json']
     },
@@ -41,7 +41,7 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(css|less)$/,
+                test: /\.(css|scss)$/,
                 use: [{
                     loader: 'style-loader'
                 }, {
@@ -50,9 +50,7 @@ module.exports = {
                         sourceMap: sourceMap
                     }
                 }, {
-                    loader: 'less-loader', options: {
-                        strictMath: true,
-                        noIeCompat: true,
+                    loader: 'sass-loader', options: {
                         sourceMap: sourceMap
                     }
                 },]

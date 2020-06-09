@@ -12,6 +12,9 @@
         },
     }
 </script>
-<style scoped lang="less">
 
+<style>
+    footer {
+        flex-shrink: 0;
+    }
 </style>

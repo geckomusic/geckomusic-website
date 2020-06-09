@@ -1,7 +1,7 @@
 <template>
     <section id="pageWrapper" class="outer-container single-post blog">
         <loader v-if="loader"></loader>
-        <div class="post-time inner-container" v-if="post.datePublished">
+        <div class="post-time inner-container text-center" v-if="post.datePublished">
             <span class="date-published">
                 {{ new Date(post.datePublished).toLocaleString('en-us', { year: 'numeric', month: 'long', day: 'numeric' })}}
             </span>
@@ -77,53 +77,4 @@
             this.activatedStuff();
         }
     }
-</script>,
-<style lang="less">
-    @import "~@styles/variables";
-    @import "~@styles/flex";
-    @import "~@styles/mixins";
-
-    [data-page-slug="Post"] {
-        #main_header {
-
-            #page_title {
-                font-size: 2.5rem;
-                @media (max-width: @tablet_width_max) {
-                    font-size: 1.75rem;
-                }
-            }
-        }
-
-        #main_header_title {
-            margin-bottom: 2rem;
-            //filter: drop-shadow(0 0.25rem 0.125rem rgba(0, 0, 0, 0.5));
-        }
-
-        #pageWrapper.single-post {
-            .blog-post {
-                overflow-x: hidden;
-                overflow-y: auto;
-
-                p {
-                    a {
-                        color: @green !important;
-                    }
-
-                }
-            }
-
-            .post-time {
-                font-weight: bold;
-                color: grey;
-                font-size: 2rem;
-                text-transform: uppercase;
-                text-align: center;
-                @media (max-width: @tablet_width_max) {
-                    font-size: 1rem;
-                }
-            }
-        }
-    }
-
-
-</style>
+</script>

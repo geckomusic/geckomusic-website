@@ -1,5 +1,5 @@
 <template>
-    <div id="app_container" class="flex flexColumn">
+    <div id="wrapper">
         <component v-bind:is="header"></component>
         <main-vue></main-vue>
         <footer-vue></footer-vue>
@@ -8,8 +8,6 @@
 <script>
     import MainVue from '~/components/main/Main'
     import FooterVue from '~/components/footer/Footer'
-
-    require("~/less/style.less");
 
     export default {
         name: 'App',
@@ -47,30 +45,3 @@
 
     }
 </script>
-<style scoped lang="less">
-
-    @import (reference) "~@styles/variables";
-    @import (reference) "~@styles/mixins";
-    @import (reference) "~@styles/flex";
-
-    #app_container{
-        .flex;
-        .flexColumn;
-        min-height: 100vh;
-    }
-
-    .moveleft-enter {
-        left: -20rem !important;
-    }
-
-    .moveleft-enter-to {
-        left: 0rem !important;
-        transition: all .5s ease;
-    }
-
-    .moveleft-leave-active {
-        transform: translate(-100%);
-        transition: all 0.5s ease;
-        position: absolute;
-    }
-</style>
