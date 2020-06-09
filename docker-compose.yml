@@ -8,10 +8,10 @@ services:
     ports:
       - 80:80
     environment:
-      WORDPRESS_DB_HOST: db
-      WORDPRESS_DB_USER: wuethemepublic@localhost
-      WORDPRESS_DB_PASSWORD: cornhulio
-      WORDPRESS_DB_NAME: wue_theme_public
+      WORDPRESS_DB_HOST: ${DB_HOST}
+      WORDPRESS_DB_NAME: ${DB_NAME}
+      WORDPRESS_DB_USER: ${DB_USER}
+      WORDPRESS_DB_PASSWORD: ${DB_PASS}
     volumes:
       - ./wordpress/wp-content/themes/wuetheme/:/var/www/html/wp-content/themes/wuetheme/
       - ./wordpress/wp-content/uploads/:/var/www/html/wp-content/uploads/
@@ -20,9 +20,9 @@ services:
     image: mysql:5.7
     restart: always
     environment:
-      MYSQL_DATABASE: wue_theme_public
-      MYSQL_USER: wuethemepublic@localhost
-      MYSQL_PASSWORD: cornhulio
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASS}
       MYSQL_RANDOM_ROOT_PASSWORD: '1'
     volumes:
       - ./db-data:/var/lib/mysql
@@ -33,9 +33,9 @@ services:
     ports:
       - 8080:80
     environment:
-      PMA_HOST: db
-      PMA_USER: wuethemepublic@localhost
-      PMA_PASSWORD: cornhulio
+      PMA_HOST: ${DB_HOST}
+      PMA_USER: ${DB_USER}
+      PMA_PASSWORD: ${DB_PASS}
 
 volumes:
   wordpress:
