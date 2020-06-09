@@ -1,5 +1,5 @@
 <template>
-    <header id="main_header">
+    <header id="main_header" class="text-center">
         <component v-bind:is="navigationComponent"></component>
         <transition name="pageTitle">
             <h1 id="page_title" class="inner-container" v-html="pageTitle" v-if="pageTitle" :key="pageTitle"></h1>
@@ -30,3 +30,9 @@
         }
     }
 </script>
+
+<style scoped>
+    h1 {
+        padding: 10px;
+    }
+</style>

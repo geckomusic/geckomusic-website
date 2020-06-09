@@ -50,3 +50,10 @@
 
     }
 </script>
+
+<style scoped>
+    #main_container {
+        flex: 1 0 auto;
+        padding: 10px 20px;
+    }
+</style>

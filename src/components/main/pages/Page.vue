@@ -1,5 +1,5 @@
 <template>
-    <div id="pageWrapper" class="outer-container">
+    <div id="pageWrapper" class="outer-container text-center">
         <loader v-if="loader"></loader>
         <div class="inner-container" v-html="post.content"></div>
     </div>

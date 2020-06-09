@@ -28,6 +28,15 @@ services:
       - ./db-data:/var/lib/mysql
       - ./database.sql:/docker-entrypoint-initdb.d/database.sql
 
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - 8080:80
+    environment:
+      PMA_HOST: db
+      PMA_USER: wuethemepublic@localhost
+      PMA_PASSWORD: cornhulio
+
 volumes:
   wordpress:
   db:

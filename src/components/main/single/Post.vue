@@ -1,7 +1,7 @@
 <template>
     <section id="pageWrapper" class="outer-container single-post blog">
         <loader v-if="loader"></loader>
-        <div class="post-time inner-container" v-if="post.datePublished">
+        <div class="post-time inner-container text-center" v-if="post.datePublished">
             <span class="date-published">
                 {{ new Date(post.datePublished).toLocaleString('en-us', { year: 'numeric', month: 'long', day: 'numeric' })}}
             </span>

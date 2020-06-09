@@ -1,7 +1,7 @@
 <template>
     <div id="pageWrapper">
         <loader v-if="loader"></loader>
-        <section v-if="post.content" class="outer-container">
+        <section v-if="post.content" class="outer-container text-center">
             <img id="homePageLogo" :src="technomad.siteInfo.logo" alt="">
             <h1 id="homePageTitle" class="title">
                 <span v-html="appTitle"></span><br><span v-html="subTitle"></span>

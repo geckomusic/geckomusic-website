@@ -1,5 +1,5 @@
 <template>
-    <div id="app_container" class="flex flexColumn">
+    <div id="wrapper">
         <component v-bind:is="header"></component>
         <main-vue></main-vue>
         <footer-vue></footer-vue>
