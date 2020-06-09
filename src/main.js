@@ -3,6 +3,13 @@ import Vue from 'vue'
 import axios from 'axios'
 import router from '~/router'
 import {store} from '~/store/store.js'
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+import './scss/styles.scss'
+
+// Install BootstrapVue
+Vue.use(BootstrapVue)
+// Optionally install the BootstrapVue icon components plugin
+Vue.use(IconsPlugin)
 
 /**
  *
@@ -11,7 +18,6 @@ import {store} from '~/store/store.js'
  *
  * */
 axios.defaults.baseURL = window.location.origin;
-
 
 /**
  * Create a fresh Vue Application instance
