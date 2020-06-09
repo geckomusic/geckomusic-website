@@ -1,5 +1,5 @@
 const path = require('path');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 //const webpack = require('webpack');
 
@@ -51,8 +51,6 @@ module.exports = {
                     }
                 }, {
                     loader: 'less-loader', options: {
-                        strictMath: true,
-                        noIeCompat: true,
                         sourceMap: sourceMap
                     }
                 },]
